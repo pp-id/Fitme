@@ -1,0 +1,30 @@
+
+<div class="dashboard" >
+ <h6>Select the exercise from the drop down below:</h6>
+  <select id="peeps" name="people" [(ngModel)]="peepsSelect" (change)="selectChange()">
+    <option *ngFor="let item of data" [value]="item.exercise" >
+      {{ item.exercise }}
+    </option>
+  </select>
+
+
+  <!-- <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" >Action</a>
+    <a class="dropdown-item" >Another action</a>
+    <a class="dropdown-item" >Something else here</a>
+  </div>
+</div> -->
+<div *ngIf="flagSave">
+  <app-save-timer></app-save-timer>
+
+</div>
+
+This is the list:
+{{listVal}}
+
+</div>
+
